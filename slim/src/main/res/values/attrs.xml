@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StateLayout">
+        <!--error布局-->
+        <attr name="error" format="reference" />
+        <!--loading布局-->
+        <attr name="loading" format="reference" />
+        <!--empty布局-->
+        <attr name="empty" format="reference" />
+
+    </declare-styleable>
+</resources>

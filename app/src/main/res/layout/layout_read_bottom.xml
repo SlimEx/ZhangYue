@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/readBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:background="@color/read_menu_container_bg"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:clickable="true"
+    tools:visibility="visible"
+    >
+
+    <!--菜单栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tvSections"
+            style="@style/Read.BottomMenu.IconButton"
+            android:drawableTop="@drawable/ic_read_catalog"
+            android:text="@string/read_catalog"
+            />
+
+        <TextView
+            android:id="@+id/tvNightMode"
+            style="@style/Read.BottomMenu.IconButton"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/ic_read_mode"
+            android:text="@string/read_night"
+            />
+
+
+        <TextView
+            android:id="@+id/tvSetting"
+            style="@style/Read.BottomMenu.IconButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableTop="@drawable/ic_read_setting"
+            android:text="@string/read_setting"
+            />
+    </RelativeLayout>
+</LinearLayout>

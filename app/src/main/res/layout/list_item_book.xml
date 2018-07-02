@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16.0dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16.0dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cover"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+        app:layout_constraintDimensionRatio="h,3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_book_cover_default"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintBottom_toTopOf="@+id/tv_describe"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="资生堂 安热沙"
+        />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toTopOf="@+id/tv_author"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="网易旗下利用大数据技术提供移动互联网应用的子公司,过去8年,先后推出有道词典、有道翻译官、有道云笔记、惠惠网、有道推广、有道精品课、有道口语大师等系列产品,总.cas sac as  s"
+        />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textAssistSecondary"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_describe"
+        tools:text="茶叶蛋"
+        />
+
+    <com.yuki.zhangyue.app.widget.ShapeTextView
+        android:id="@+id/tv_is_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="1.5dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="1.5dp"
+        android:textColor="@color/md_red_200"
+        android:textSize="@dimen/text_size_micro"
+        app:layout_constraintBottom_toBottomOf="@id/cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:super_cornerRadius="2dp"
+        app:super_strokeColor="@color/md_red_200"
+        app:super_strokeWidth="1px"
+        tools:text="已完结"
+        />
+
+    <com.yuki.zhangyue.app.widget.ShapeTextView
+        android:id="@+id/tv_word_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="1.5dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="1.5dp"
+        android:textColor="@color/textAssistSecondary"
+        android:textSize="@dimen/text_size_micro"
+        app:layout_constraintBottom_toBottomOf="@id/cover"
+        app:layout_constraintRight_toLeftOf="@id/tv_is_finish"
+        app:super_cornerRadius="2dp"
+        app:super_strokeColor="@color/textAssistSecondary"
+        app:super_strokeWidth="1px"
+        tools:text="2.5万字"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

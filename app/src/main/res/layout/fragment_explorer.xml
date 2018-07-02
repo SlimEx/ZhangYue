@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_explore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll|snap"
+            >
+
+            <include layout="@layout/toolbar_view_search"/>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabExplore"
+                android:layout_width="0dp"
+                android:layout_height="40.0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                app:tabBackground="@drawable/bg_tab_item_main"
+                app:tabIndicatorColor="@color/white"
+                app:tabMaxWidth="144dp"
+                app:tabMinWidth="60dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/white"
+                />
+
+            <FrameLayout
+                android:id="@+id/fl_action"
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                >
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivBookMore"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_more_horiz_black_24dp"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
